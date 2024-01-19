@@ -1,7 +1,7 @@
 /* app.js - Infriendly's functionality. */
 
 function updateVersionString() {
-    const version = "0.1.0";
+    const version = "0.2";
     let versionElement = document.getElementById("version-string");
     versionElement.innerText = version;
 }
