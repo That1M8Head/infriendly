@@ -39,9 +39,14 @@ function loadStartupFile(fileName) {
     xhr.send();
 }
 
+function focusTextArea() {
+    document.querySelector("main").focus();
+}
+
 window.addEventListener("load", () => {
     updateVersionString();
     loadStartupFile("STARTUP.txt");
+    focusTextArea();
 });
 
 function openFileWithDialog() {
