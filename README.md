@@ -34,7 +34,8 @@ browser.
 
 Infriendly's simplicity and lack of automated features may not appeal to
 everyone. In fact, it's not designed to appeal to everyone. Many users prefer
-the convenience and assistance provided by AI-powered writing tools.
+the convenience and assistance provided by more traditional code editors or
+Markdown processors.
 
 However, for those who value a pure and unadulterated writing
 experience, Infriendly offers a refreshing alternative.
@@ -46,8 +47,12 @@ You can access Infriendly at `https://that1m8head.github.io/infriendly`.
 Once you open it up, you’ll be greeted with a white screen (or `#222222` screen,
 if you’re using dark mode) and a blinking text prompt.
 
-Infriendly defaults to Markdown for formatting, and doesn’t let you use anything
-else, because that would be a distraction.
+Infriendly defaults to just straight plain text for formatting, and doesn’t let
+you use anything else, because that would be a distraction, and I'm also too
+lazy to build markup functionality into it.
+
+You can use Infriendly to edit code, but don't expect it to be very good.
+Don't expect Gedit, expect Notepad.
 
 ## Offline Usage
 
@@ -67,11 +72,24 @@ Infriendly is licensed to everyone under the Apache License 2.0.
 Infriendly uses SemVer-1 (Semantic Versioning Minus 1), meaning the PATCH number
 is excluded.
 
-* v0.1: Initial beta version. Includes basic text editing but no saving or
-opening files.
-* v0.2: Basic text editing and file saving.
+* v0.0: Initial non-versioned release, including only the layout and styling.
+* v0.1: Initial beta version. Includes the layout, styling and basic text
+editing but no saving or opening files.
+* v0.2: Basic file opening and saving, where saving a file will download it
+with a random hex string in the file name.
 
-## Contribution
+## Enhancement Ideas
 
-Feel free to send pull requests with feature contributions, just as long as they
-don’t break Infriendly’s editing model.
+Sorted in order of most feasible to least feasible:
+
+* Storing file name and metadata
+* Handling non-textual files
+* Allowing use even offline
+* In-app pop-up dialogs
+* Custom themes
+* Layout customisation
+* Title bar and command bar customisation
+* Client-side configuration
+* Exporting to more common formats
+* Markup language processing (for languages like Markdown and AsciiDoc)
+* Vim and Emacs style editing
