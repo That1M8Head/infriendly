@@ -32,3 +32,61 @@ window.addEventListener("load", () => {
     xhr.open("GET", "STARTUP.txt", true);
     xhr.send();
 });
+
+function openFileWithDialog() {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                const fileContents = e.target.result;
+                setTextAreaContent(fileContents);
+            }
+
+            reader.readAsText(file);
+        }
+    })
+
+    fileInput.click();
+}
+
+function saveFileWithDialog(content, fileName) {
+    const blob = new Blob([content], { type: 'text/plain' });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    URL.revokeObjectURL(url);
+}
+
+function handleSaveShortcut(event) {
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+        let randomHexString = Math.random().toString(16).slice(2);
+        let fileName = `infriendly-download-${randomHexString}.txt`;
+        saveFileWithDialog(document.querySelector("main").innerText, fileName);
+    }
+}
+
+function handleOpenShortcut(event) {
+    if (event.ctrlKey && event.key === 'o') {
+        event.preventDefault();
+        openFileWithDialog();
+    }
+}
+
+// Attach event listeners to the document
+document.addEventListener('keydown', handleSaveShortcut);
+document.addEventListener('keydown', handleOpenShortcut);
