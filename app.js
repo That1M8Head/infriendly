@@ -14,7 +14,7 @@ function loadFromFile(fileName, callback) {
         callback(fileContents);
     }
 
-    reader.readAsText(fileName);
+    reader.readAsText(fileName, "UTF-8");
 }
 
 function setTextAreaContent(content) {
