@@ -12,7 +12,7 @@ Welcome to Infriendly, a distraction-free online web platform for writing textua
 
 2. Distraction-Free Writing: Start typing without any interference. Focus solely on your ideas and the clarity of your expression. Infriendly uses the venerable Markdown as its markup format, so writing is very similar to just writing a plain text document.
 
-4. Save and Share: `Control-S` will download your file to your default downloads folder quickly and easily. Keep in mind it'll download as a `.md` file, but you can download it as HTML with `Control+E`.
+3. Save and Share: `Control-S` will download your file to your default downloads folder quickly and easily. Keep in mind it'll download as a `.md` file, but you can download it as HTML with `Control+E`.
 
 ## Features
 
