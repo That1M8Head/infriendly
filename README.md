@@ -2,6 +2,10 @@
 
 > In a world dominated by smarts, perhaps stupid is better…
 
+## Not Ready Yet
+
+Infriendly is still under construction, so please check back later.
+
 ## Preface
 
 Infriendly is an online web platform for writing textual documents that
