@@ -1,9 +1,16 @@
-/* app.js - Infriendly's functionality. */
+/* app.js - The main JavaScript file for Infriendly. */
+
+let textArea = document.querySelector("main");
+let titleBar = document.querySelector("header");
+let commandBar = document.querySelector("footer");
+
+const appVersion = "0.2";
+
+const defaultCommandBar = 'Commands - <a href="#" onclick="openFileWithDialog()">[Control+O] Open</a> <a href="#" onclick="saveFile()">[Control+S] Download</a>';
 
 function updateVersionString() {
-    const version = "0.2";
     let versionElement = document.getElementById("version-string");
-    versionElement.innerText = version;
+    versionElement.innerText = appVersion;
 }
 
 function loadFromFile(fileName, callback) {
@@ -18,8 +25,6 @@ function loadFromFile(fileName, callback) {
 }
 
 function setTextAreaContent(content) {
-    const textArea = document.querySelector("main");
-    
     const formattedContent = content.replace(/\n/g, '<br>');
     
     textArea.innerHTML = formattedContent;
@@ -40,11 +45,12 @@ function loadStartupFile(fileName) {
 }
 
 function focusTextArea() {
-    document.querySelector("main").focus();
+    textArea.focus();
 }
 
 window.addEventListener("load", () => {
     updateVersionString();
+    checkUserActivation();
     loadStartupFile("STARTUP.txt");
     focusTextArea();
 });
@@ -69,6 +75,8 @@ function openFileWithDialog() {
     })
 
     fileInput.click();
+
+    checkUserActivation();
 }
 
 function saveFile(content, fileName) {
@@ -103,6 +111,23 @@ function handleOpenShortcut(event) {
     }
 }
 
-// Attach event listeners to the document
-document.addEventListener('keypress', handleSaveShortcut);
-document.addEventListener('keypress', handleOpenShortcut);
+/* This is required for Firefox, since it doesn't support opening dialogues unless user activation is active.
+ * Chrome doesn't need it, but since Infriendly is cross-platform, we *do* need it.
+ * https://developer.mozilla.org/en-US/docs/Web/API/UserActivation */
+function checkUserActivation() {
+    if (navigator.userActivation.isActive) {
+        updateCommandBar(defaultCommandBar);
+    }
+    else {
+        updateCommandBar('Focus Lost - Please click the browser window to use keyboard shortcuts.');
+    }
+}
+
+function updateCommandBar(message) {
+    commandBar.innerHTML = message;
+}
+
+document.querySelector("body").addEventListener("mousedown", checkUserActivation)
+
+document.addEventListener('keydown', handleSaveShortcut);
+document.addEventListener('keydown', handleOpenShortcut);
