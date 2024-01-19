@@ -35,12 +35,13 @@ footer {
 
 main {
     flex: 1;
-    min-width: 500px;
-    max-width: 60vw;
+    min-width: 450px;
+    max-width: 1200px;
     margin: auto;
     padding: 25px;
     background-color: #00000011;
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 [contenteditable]:focus {
