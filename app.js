@@ -66,7 +66,7 @@ function openFileWithDialog() {
     fileInput.click();
 }
 
-function saveFileWithDialog(content, fileName) {
+function saveFile(content, fileName) {
     const blob = new Blob([content], { type: 'text/plain' });
 
     const url = URL.createObjectURL(blob);
@@ -87,7 +87,7 @@ function handleSaveShortcut(event) {
         event.preventDefault();
         let randomHexString = Math.random().toString(16).slice(2);
         let fileName = `infriendly-download-${randomHexString}.txt`;
-        saveFileWithDialog(document.querySelector("main").innerText, fileName);
+        saveFile(document.querySelector("main").innerText, fileName);
     }
 }
 
