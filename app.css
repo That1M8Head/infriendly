@@ -24,6 +24,7 @@ main {
     min-width: 400px;
     margin: auto;
     padding: 25px;
+    background-color: #00000011;
     box-sizing: border-box;
 }
 
