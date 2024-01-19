@@ -1,0 +1,33 @@
+Infriendly
+==================
+
+| In a world dominated by smarts, maybe stupid is better...
+
+Welcome to Infriendly, a distraction-free online web platform for writing textual documents that intentionally does not have any "smart" features or generative AI capabilities.
+
+To begin writing with Infriendly, enter [Control+A Delete] to get rid of this text.
+
+Getting Started
+------------------
+
+1. Don't Sign Up: Infriendly doesn't require an account, and it doesn't support connecting to cloud storage.
+
+2. Distraction-Free Writing: Start typing without any interference. Focus solely on your ideas and the clarity of your expression. Infriendly prefers to use straight-up plain text instead of something like Markdown or AsciiDoc. It's easier to program and easier on the browser.
+
+3. Save and Share: [Control-S] will download your file to your default downloads folder quickly and easily. Keep in mind it'll download as a .txt file.
+
+Features
+------------------
+
+1. Simplicity at its core. No predictive text, no auto-correction, and definitely no AI-generated suggestions. It's just you, your thoughts, and a clean writing interface. If you want AI, try Notion (https://www.notion.so/) instead. Maybe you'll like that better.
+
+2. The power of plain text. Infriendly is one of those programs that does one thing and does it well, and it handles text streams, because that's a universal interface. If you recognise that quote, well done! You get a cookie emoji. 🍪
+
+3. Totally private. Your words are yours and yours alone. Infriendly doesn't store any data or analyse your writing patterns. You don't even need to sign up for an account. Enjoy the peace of mind that comes with knowing your content remains confidential.
+
+4. Available wherever a web browser goes. Whether you're using Windows, Linux, macOS, Android, iOS, iPadOS (which is just iOS again) or even a Samsung Smart Fridge, Infriendly is accessible across various platforms.
+
+Contributing
+------------------
+
+Infriendly is Free, Libre and Open Source, so feel free to send a pull request with some feature contributions on Infriendly's GitHub repo at https://github.com/That1M8Head/infriendly.
