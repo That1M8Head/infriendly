@@ -21,7 +21,8 @@ straight-up plain text instead of something like Markdown or AsciiDoc. It's
 easier to program and easier on the browser.
 
 3. Save and Share: [Control-S] will download your file to your default downloads
-folder quickly and easily. Keep in mind it'll download as a .txt file.
+folder quickly and easily. Keep in mind it'll download as a .txt file with a
+random hex string in the file name.
 
 Features
 ------------------

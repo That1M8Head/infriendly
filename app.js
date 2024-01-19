@@ -1,5 +1,11 @@
 /* app.js - Infriendly's functionality. */
 
+function updateVersionString() {
+    const version = "0.1.0";
+    let versionElement = document.getElementById("version-string");
+    versionElement.innerText = version;
+}
+
 function loadFromFile(fileName, callback) {
     var reader = new FileReader();
 
@@ -19,7 +25,7 @@ function setTextAreaContent(content) {
     textArea.innerHTML = formattedContent;
 }
 
-window.addEventListener("load", () => {
+function loadStartupFile(fileName) {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -29,8 +35,13 @@ window.addEventListener("load", () => {
         }
     };
 
-    xhr.open("GET", "STARTUP.txt", true);
+    xhr.open("GET", fileName, true);
     xhr.send();
+}
+
+window.addEventListener("load", () => {
+    updateVersionString();
+    loadStartupFile("STARTUP.txt");
 });
 
 function openFileWithDialog() {
