@@ -14,7 +14,6 @@ body {
 header, footer {
     background-color: #f0f0f0;
     border-radius: 5px;
-    color: black;
     padding: 10px 20px;
     text-align: center;
     box-sizing: border-box;
@@ -34,4 +33,14 @@ main {
 
 footer {
     margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: white;
+    }
+    header, footer {
+        background-color: #333;
+    }
 }
