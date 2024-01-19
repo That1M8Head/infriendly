@@ -99,5 +99,5 @@ function handleOpenShortcut(event) {
 }
 
 // Attach event listeners to the document
-document.addEventListener('keydown', handleSaveShortcut);
-document.addEventListener('keydown', handleOpenShortcut);
+document.addEventListener('keypress', handleSaveShortcut);
+document.addEventListener('keypress', handleOpenShortcut);
